@@ -74,7 +74,6 @@ class Ui_registration(object):
         self.password_field.raise_()
         self.confirmpassword_field.raise_()
         self.pushButton.raise_()
-
         self.retranslateUi(registration)
         QtCore.QMetaObject.connectSlotsByName(registration)
 
@@ -114,14 +113,13 @@ class Ui_registration(object):
                             msg.setText("Registration Is Successful")
                             msg.setWindowTitle("Success")
                             msg.setStandardButtons(QMessageBox.Ok)
-                            retVal = msg.exec_()
-                            if retVal == 1024:
+                            self.retVal = msg.exec_()
+                            if self.retVal == 1024:
                                 self.name_field.setText("")
                                 self.emailid_field.setText("")
                                 self.phoneno_field.setText("")
                                 self.password_field.setText("")
                                 self.confirmpassword_field.setText("")
-                                registration.close()
                             cur.close()
                             conn.close()
                         else:

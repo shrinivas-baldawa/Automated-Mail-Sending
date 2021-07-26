@@ -323,22 +323,10 @@ class Ui_MainPage(object):
             if retVal == 1024:
                 self.eventUpdate_text.setText('')
                 self.announcement_text.setText('')
-                self.all_checkbox.setEnabled(True)
-                self.fe_checkbox.setEnabled(True)
-                self.se_checkbox.setEnabled(True)
-                self.te_checkbox.setEnabled(True)
-                self.be_checkbox.setEnabled(True)
-                self.ce_checkbox.setEnabled(True)
-                self.it_checkbox.setEnabled(True)
-                self.extc_checkbox.setEnabled(True)
-                self.mech_checkbox.setEnabled(True)
-                self.ppt_checkbox.setEnabled(True)
-                
-
         except Exception as e:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Warning)
-            msg.setText('Error Occured While Mail Sending {}'.format(str(e)))
+            msg.setText(f'Error Occured While Mail Sending {str(e)}')
             msg.setWindowTitle("Warning")
             msg.exec_()
         finally:
