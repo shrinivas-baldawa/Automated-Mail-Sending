@@ -4,3 +4,4 @@ requests==2.25.1
 PyQt5==5.15.4
 xlrd==2.0.1
 openpyxl==3.0.7
+pyqt5==5.15.4
